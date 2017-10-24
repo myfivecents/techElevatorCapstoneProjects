@@ -1,0 +1,27 @@
+CLI
+	METHODS
+		-print park information //screen 1
+		-print campgrounds //screen 3 and screen 4
+		-print sites w/ campground info //screen 5
+		-checkIfOffseason(Campground campground, LocalDate fromDate, LocalDate toDate)
+
+ParkDAO
+	METHODS
+		-List<Park> getAllParks() //screen 1
+
+
+CampgroundDAO
+	METHODS
+		-List<Campground> getAllCampgroundsAtPark(Park currentPark) //screen 3 and screen 4
+		-Campground getCampgroundWithCampgroundId(Integer campgroundId);
+
+SiteDAO
+	METHODS
+		-List<Site> getSitesAvailableAtCampground(Campground campground, LocalDate fromDate, LocalDate toDate) //screen 5
+		-List<Site> getSitesAvailable(argObject obj);
+		-void makeReservationAtSite(Reservation reservation) //screen 5
+	TESTS
+		
+ReservationDAO
+	METHODS
+		-List<Reservation> getAllReservationsAtPark(Park park, LocalDate endDate);
